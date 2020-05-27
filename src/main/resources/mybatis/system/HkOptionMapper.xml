@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.system.mapper.HkOptionMapper">
+    
+    <resultMap type="HkOption" id="HkOptionResult">
+        <result property="key"    column="key"    />
+        <result property="value"    column="value"    />
+    </resultMap>
+
+    <sql id="selectHkOptionVo">
+        select `key`, value from hk_option
+    </sql>
+
+    <select id="selectHkOptionList" parameterType="HkOption" resultMap="HkOptionResult">
+        SELECT * FROM hk_option;
+    </select>
+    
+    <select id="selectHkOptionById" parameterType="String" resultMap="HkOptionResult">
+        <include refid="selectHkOptionVo"/>
+        where `key` = #{key}
+    </select>
+        
+    <insert id="insertHkOption" parameterType="HkOption">
+        insert into hk_option
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="key != null  and key != ''">`key`,</if>
+            <if test="value != null  and value != ''">value,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="key != null  and key != ''">#{key},</if>
+            <if test="value != null  and value != ''">#{value},</if>
+         </trim>
+    </insert>
+
+    <update id="updateHkOption" parameterType="HkOption">
+        update hk_option
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="value != null  and value != ''">value = #{value},</if>
+        </trim>
+        where `key` = #{key}
+    </update>
+
+    <delete id="deleteHkOptionById" parameterType="String">
+        delete from hk_option where `key` = #{key}
+    </delete>
+
+    <delete id="deleteHkOptionByIds" parameterType="String">
+        delete from hk_option where `key` in
+        <foreach item="key" collection="array" open="(" separator="," close=")">
+            #{key}
+        </foreach>
+    </delete>
+    
+</mapper>

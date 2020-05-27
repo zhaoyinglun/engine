@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.system.mapper.HkFlightMapper">
+
+    <resultMap type="HkFlight" id="HkFlightResult">
+        <result property="id"    column="ID"    />
+        <result property="iataident"    column="IATAIDENT"    />
+        <result property="ident"    column="IDENT"    />
+        <result property="friendlyident"    column="FRIENDLYIDENT"    />
+        <result property="airlineicao"    column="AIRLINEICAO"    />
+        <result property="flightype"    column="FLIGHTYPE"    />
+        <result property="flightypefriendlytype"    column="FLIGHTYPEFRIENDLYTYPE"    />
+        <result property="origin"    column="ORIGIN"    />
+        <result property="destination"    column="DESTINATION"    />
+        <result property="takeofftimesscheduled"    column="TAKEOFFTIMESSCHEDULED"    />
+        <result property="landingtimesscheduled"    column="LANDINGTIMESSCHEDULED"    />
+        <result property="takeOffWeek" column="TAKEOFFWEEK" typeHandler="com.ruoyi.project.system.domain.enums.EnumTypeHandler"/>
+        <result property="landWeek" column="LANDWEEK" typeHandler="com.ruoyi.project.system.domain.enums.EnumTypeHandler"/>
+        <result property="updatedTime" column="UPDATEDTIME"/>
+    </resultMap>
+
+    <sql id="selectHkFlightVo">
+        select ID, IATAIDENT, IDENT, FRIENDLYIDENT, AIRLINEICAO, FLIGHTYPE, FLIGHTYPEFRIENDLYTYPE, ORIGIN, DESTINATION,
+        if(TAKEOFFTIMESSCHEDULED = 0,null,FROM_UNIXTIME(TAKEOFFTIMESSCHEDULED)) as TAKEOFFTIMESSCHEDULED,
+        if(LANDINGTIMESSCHEDULED = 0,null,FROM_UNIXTIME(LANDINGTIMESSCHEDULED)) as LANDINGTIMESSCHEDULED,
+        if(UPDATEDTIME =0 , null ,FROM_UNIXTIME(UPDATEDTIME)) as UPDATEDTIME,
+        TAKEOFFWEEK,LANDWEEK from hk_flight
+    </sql>
+
+    <select id="selectHkFlightList" parameterType="HkFlight" resultMap="HkFlightResult">
+        <include refid="selectHkFlightVo"/>
+        <where>
+            <if test="iataident != null  and iataident != ''"> and IATAIDENT = #{iataident}</if>
+            <if test="ident != null  and ident != ''"> and IDENT = #{ident}</if>
+            <if test="friendlyident != null  and friendlyident != ''"> and FRIENDLYIDENT = #{friendlyident}</if>
+            <if test="airlineicao != null  and airlineicao != ''"> and AIRLINEICAO = #{airlineicao}</if>
+            <if test="flightype != null  and flightype != ''"> and FLIGHTYPE = #{flightype}</if>
+            <if test="flightypefriendlytype != null  and flightypefriendlytype != ''"> and FLIGHTYPEFRIENDLYTYPE = #{flightypefriendlytype}</if>
+            <if test="origin != null  and origin != ''"> and ORIGIN = #{origin}</if>
+            <if test="destination != null  and destination != ''"> and DESTINATION = #{destination}</if>
+            <if test="params.beginTakeofftimesscheduled != null and params.beginTakeofftimesscheduled != '' and params.endTakeofftimesscheduled != null and params.endTakeofftimesscheduled != ''"> and TAKEOFFTIMESSCHEDULED between #{params.beginTakeofftimesscheduled} and #{params.endTakeofftimesscheduled}</if>
+            <if test="params.beginLandingtimesscheduled != null and params.beginLandingtimesscheduled != '' and params.endLandingtimesscheduled != null and params.endLandingtimesscheduled != ''"> and LANDINGTIMESSCHEDULED between #{params.beginLandingtimesscheduled} and #{params.endLandingtimesscheduled}</if>
+            <if test="takeOffWeek != null and takeOffWeek!= ''">AND TAKEOFFWEEK = #{takeOffWeek}</if>
+            <if test="landWeek != null and landWeek != ''">and LANDWEEK ={landWeek}</if>
+            <if test="updatedTime != null">and TO_DAYS(UPDATEDTIME) = TO_DAYS(#{updatedTime})</if>
+        </where>
+    </select>
+
+    <select id="selectHkFlightById" parameterType="Long" resultMap="HkFlightResult">
+        <include refid="selectHkFlightVo"/>
+        where ID = #{id}
+    </select>
+
+    <insert id="insertHkFlight" parameterType="HkFlight" useGeneratedKeys="true" keyProperty="id">
+        insert into hk_flight
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="iataident != null  and iataident != ''">IATAIDENT,</if>
+            <if test="ident != null  and ident != ''">IDENT,</if>
+            <if test="friendlyident != null  and friendlyident != ''">FRIENDLYIDENT,</if>
+            <if test="airlineicao != null  and airlineicao != ''">AIRLINEICAO,</if>
+            <if test="flightype != null  and flightype != ''">FLIGHTYPE,</if>
+            <if test="flightypefriendlytype != null  and flightypefriendlytype != ''">FLIGHTYPEFRIENDLYTYPE,</if>
+            <if test="origin != null  and origin != ''">ORIGIN,</if>
+            <if test="destination != null  and destination != ''">DESTINATION,</if>
+            <if test="takeofftimesscheduled != null ">TAKEOFFTIMESSCHEDULED,</if>
+            <if test="landingtimesscheduled != null ">LANDINGTIMESSCHEDULED,</if>
+            <if test="takeOffWeek != null and takeOffWeek!= ''">TAKEOFFWEEK,</if>
+            <if test="landWeek != null and landWeek != ''">LANDWEEK ,</if>
+            <if test="updatedTime != null">and UPDATEDTIME,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="iataident != null  and iataident != ''">#{iataident},</if>
+            <if test="ident != null  and ident != ''">#{ident},</if>
+            <if test="friendlyident != null  and friendlyident != ''">#{friendlyident},</if>
+            <if test="airlineicao != null  and airlineicao != ''">#{airlineicao},</if>
+            <if test="flightype != null  and flightype != ''">#{flightype},</if>
+            <if test="flightypefriendlytype != null  and flightypefriendlytype != ''">#{flightypefriendlytype},</if>
+            <if test="origin != null  and origin != ''">#{origin},</if>
+            <if test="destination != null  and destination != ''">#{destination},</if>
+            <if test="takeofftimesscheduled != null ">#{takeofftimesscheduled.longTime},</if>
+            <if test="landingtimesscheduled != null ">#{landingtimesscheduled.longTime},</if>
+            <if test="takeOffWeek != null and takeOffWeek!= ''">#{takeOffWeek.ordinal},</if>
+            <if test="landWeek != null and landWeek != ''">#{landWeek.ordinal} ,</if>
+            <if test="updatedTime != null">#{updatedTime.longTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateHkFlight" parameterType="HkFlight">
+        update hk_flight
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="iataident != null  and iataident != ''">IATAIDENT = #{iataident},</if>
+            <if test="ident != null  and ident != ''">IDENT = #{ident},</if>
+            <if test="friendlyident != null  and friendlyident != ''">FRIENDLYIDENT = #{friendlyident},</if>
+            <if test="airlineicao != null  and airlineicao != ''">AIRLINEICAO = #{airlineicao},</if>
+            <if test="flightype != null  and flightype != ''">FLIGHTYPE = #{flightype},</if>
+            <if test="flightypefriendlytype != null  and flightypefriendlytype != ''">FLIGHTYPEFRIENDLYTYPE = #{flightypefriendlytype},</if>
+            <if test="origin != null  and origin != ''">ORIGIN = #{origin},</if>
+            <if test="destination != null  and destination != ''">DESTINATION = #{destination},</if>
+            <if test="takeofftimesscheduled != null ">TAKEOFFTIMESSCHEDULED = #{takeofftimesscheduled.longTime},</if>
+            <if test="landingtimesscheduled != null ">LANDINGTIMESSCHEDULED = #{landingtimesscheduled.longTime},</if>
+            <if test="takeOffWeek != null ">TAKEOFFWEEK = #{takeOffWeek.ordinal} ,</if>
+            <if test="landWeek != null"> LANDWEEK = #{landWeek.ordinal} ,</if>
+            <if test="updatedTime != null">UPDATEDTIME = #{updatedTime.longTime} ,</if>
+        </trim>
+        where ID = #{id}
+    </update>
+
+    <delete id="deleteHkFlightById" parameterType="Long">
+        delete from hk_flight where ID = #{id}
+    </delete>
+
+    <delete id="deleteHkFlightByIds" parameterType="String">
+        delete from hk_flight where ID in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

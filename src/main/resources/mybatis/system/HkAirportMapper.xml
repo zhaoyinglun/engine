@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.system.mapper.HkAirportMapper">
+    
+    <resultMap type="HkAirport" id="HkAirportResult">
+        <result property="id"    column="ID"    />
+        <result property="tz"    column="TZ"    />
+        <result property="iata"    column="IATA"    />
+        <result property="icao"    column="ICAO"    />
+        <result property="friendlyname"    column="FRIENDLYNAME"    />
+        <result property="friendlylocation"    column="FRIENDLYLOCATION"    />
+        <result property="longitude"    column="LONGITUDE"    />
+        <result property="latitude"    column="LATITUDE"    />
+    </resultMap>
+
+    <resultMap  type="HkAirport" id="HkAirportResultD">
+        <result property="id"    column="ID"    />
+        <result property="tz"    column="TZ"    />
+        <result property="iata"    column="IATA"    />
+        <result property="icao"    column="ICAO"    />
+        <result property="friendlyname"    column="FRIENDLYNAME"    />
+        <result property="friendlylocation"    column="FRIENDLYLOCATION"    />
+        <result property="longitude"    column="LONGITUDE"    />
+        <result property="latitude"    column="LATITUDE"    />
+        <result property="distance"    column="KM"          />
+    </resultMap>
+
+    <select id="selectHkAirportByDistance" parameterType="HkAirport" resultMap="HkAirportResultD">
+        SELECT *
+        , SQRT(((#{latitude} - LATITUDE)/360*PI()*2*6371)*((#{latitude} - LATITUDE)/360*PI()*2*6371) +
+        ((#{longitude}-LONGITUDE)/360*2*PI()*6371*COS((#{latitude} + LATITUDE)/2))*((#{longitude}-LONGITUDE)/360*2*PI()*6371*COS((#{latitude} + LATITUDE)/2))) as KM
+        FROM hk_airport
+        <where>
+            <if test="longitude != null and longitude != '' and latitude != null and latitude != '' and distance != null and distance != '' " >
+                SQRT(((#{latitude} - LATITUDE)/360*PI()*2*6371)*((#{latitude} - LATITUDE)/360*PI()*2*6371) +
+                ((#{longitude}-LONGITUDE)/360*2*PI()*6371*COS((#{latitude} + LATITUDE)/2))*((#{longitude}-LONGITUDE)/360*2*PI()*6371*COS((#{latitude} + LATITUDE)/2))) &lt; (#{distance} ) ORDER BY KM ASC
+            </if>
+        </where>
+    </select>
+
+    <sql id="selectHkAirportVo">
+        select ID, TZ, IATA, ICAO, FRIENDLYNAME, FRIENDLYLOCATION, LONGITUDE, LATITUDE from hk_airport
+    </sql>
+
+    <select id="selectHkAirportList" parameterType="HkAirport" resultMap="HkAirportResult">
+        <include refid="selectHkAirportVo"/>
+        <where>  
+            <if test="tz != null  and tz != ''"> and TZ like concat('%', #{tz}, '%')</if>
+            <if test="iata != null  and iata != ''"> and IATA = #{iata}</if>
+            <if test="icao != null  and icao != ''"> and ICAO = #{icao}</if>
+            <if test="friendlyname != null  and friendlyname != ''"> and FRIENDLYNAME like concat('%', #{friendlyname}, '%')</if>
+            <if test="friendlylocation != null  and friendlylocation != ''"> and FRIENDLYLOCATION like concat('%', #{friendlylocation}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectHkAirportById" parameterType="Long" resultMap="HkAirportResult">
+        <include refid="selectHkAirportVo"/>
+        where ID = #{id}
+    </select>
+        
+    <!--<insert id="insertHkAirport" parameterType="HkAirport" useGeneratedKeys="true" keyProperty="id">-->
+        <!--insert into hk_airport-->
+        <!--<trim prefix="(" suffix=")" suffixOverrides=",">-->
+            <!--<if test="tz != null  and tz != ''">TZ,</if>-->
+            <!--<if test="iata != null  and iata != ''">IATA,</if>-->
+            <!--<if test="icao != null  and icao != ''">ICAO,</if>-->
+            <!--<if test="friendlyname != null  and friendlyname != ''">FRIENDLYNAME,</if>-->
+            <!--<if test="friendlylocation != null  and friendlylocation != ''">FRIENDLYLOCATION,</if>-->
+            <!--<if test="longitude != null ">LONGITUDE,</if>-->
+            <!--<if test="latitude != null ">LATITUDE,</if>-->
+         <!--</trim>-->
+        <!--<trim prefix="values (" suffix=")" suffixOverrides=",">-->
+            <!--<if test="tz != null  and tz != ''">#{tz},</if>-->
+            <!--<if test="iata != null  and iata != ''">#{iata},</if>-->
+            <!--<if test="icao != null  and icao != ''">#{icao},</if>-->
+            <!--<if test="friendlyname != null  and friendlyname != ''">#{friendlyname},</if>-->
+            <!--<if test="friendlylocation != null  and friendlylocation != ''">#{friendlylocation},</if>-->
+            <!--<if test="longitude != null ">#{longitude},</if>-->
+            <!--<if test="latitude != null ">#{latitude},</if>-->
+         <!--</trim>-->
+    <!--</insert>-->
+
+
+
+    <insert id="insertHkAirplane" parameterType="java.util.List" >
+        insert into hk_airplane
+        values
+        <foreach collection="list" item="item" index="index"  separator="," >
+            (#{item.id},#{item.longitude},#{item.latitude},#{item.height},#{item.speed},#{item.type},#{item.direction},#{item.airplaneICAO},#{item.flightICAO})
+        </foreach>
+    </insert>
+
+    <update id="updateHkAirport" parameterType="HkAirport">
+        update hk_airport
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="tz != null  and tz != ''">TZ = #{tz},</if>
+            <if test="iata != null  and iata != ''">IATA = #{iata},</if>
+            <if test="icao != null  and icao != ''">ICAO = #{icao},</if>
+            <if test="friendlyname != null  and friendlyname != ''">FRIENDLYNAME = #{friendlyname},</if>
+            <if test="friendlylocation != null  and friendlylocation != ''">FRIENDLYLOCATION = #{friendlylocation},</if>
+            <if test="longitude != null ">LONGITUDE = #{longitude},</if>
+            <if test="latitude != null ">LATITUDE = #{latitude},</if>
+        </trim>
+        where ID = #{id}
+    </update>
+
+    <delete id="deleteHkAirportById" parameterType="Long">
+        delete from hk_airport where ID = #{id}
+    </delete>
+
+    <delete id="deleteHkAirportByIds" parameterType="String">
+        delete from hk_airport where ID in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    
+</mapper>

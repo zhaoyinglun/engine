@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.system.mapper.HkAirlineMapper">
+    
+    <resultMap type="HkAirline" id="HkAirlineResult">
+        <result property="id"    column="ID"    />
+        <result property="fullname"    column="FULLNAME"    />
+        <result property="shortname"    column="SHORTNAME"    />
+        <result property="icao"    column="ICAO"    />
+        <result property="iata"    column="IATA"    />
+        <result property="callsign"    column="CALLSIGN"    />
+        <result property="url"    column="URL"    />
+    </resultMap>
+
+    <sql id="selectHkAirlineVo">
+        select ID, FULLNAME, SHORTNAME, ICAO, IATA, CALLSIGN, URL from hk_airline
+    </sql>
+
+    <select id="selectHkAirlineList" parameterType="HkAirline" resultMap="HkAirlineResult">
+        <include refid="selectHkAirlineVo"/>
+        <where>  
+            <if test="fullname != null  and fullname != ''"> and FULLNAME like concat('%', #{fullname}, '%')</if>
+            <if test="shortname != null  and shortname != ''"> and SHORTNAME like concat('%', #{shortname}, '%')</if>
+            <if test="icao != null  and icao != ''"> and ICAO = #{icao}</if>
+            <if test="iata != null  and iata != ''"> and IATA = #{iata}</if>
+            <if test="callsign != null  and callsign != ''"> and CALLSIGN like concat('%', #{callsign}, '%')</if>
+            <if test="url != null  and url != ''"> and URL like concat('%', #{url}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectHkAirlineById" parameterType="Long" resultMap="HkAirlineResult">
+        <include refid="selectHkAirlineVo"/>
+        where ID = #{id}
+    </select>
+        
+    <insert id="insertHkAirline" parameterType="HkAirline" useGeneratedKeys="true" keyProperty="id">
+        insert into hk_airline
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="fullname != null  and fullname != ''">FULLNAME,</if>
+            <if test="shortname != null  and shortname != ''">SHORTNAME,</if>
+            <if test="icao != null  and icao != ''">ICAO,</if>
+            <if test="iata != null  and iata != ''">IATA,</if>
+            <if test="callsign != null  and callsign != ''">CALLSIGN,</if>
+            <if test="url != null  and url != ''">URL,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="fullname != null  and fullname != ''">#{fullname},</if>
+            <if test="shortname != null  and shortname != ''">#{shortname},</if>
+            <if test="icao != null  and icao != ''">#{icao},</if>
+            <if test="iata != null  and iata != ''">#{iata},</if>
+            <if test="callsign != null  and callsign != ''">#{callsign},</if>
+            <if test="url != null  and url != ''">#{url},</if>
+         </trim>
+    </insert>
+
+    <update id="updateHkAirline" parameterType="HkAirline">
+        update hk_airline
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="fullname != null  and fullname != ''">FULLNAME = #{fullname},</if>
+            <if test="shortname != null  and shortname != ''">SHORTNAME = #{shortname},</if>
+            <if test="icao != null  and icao != ''">ICAO = #{icao},</if>
+            <if test="iata != null  and iata != ''">IATA = #{iata},</if>
+            <if test="callsign != null  and callsign != ''">CALLSIGN = #{callsign},</if>
+            <if test="url != null  and url != ''">URL = #{url},</if>
+        </trim>
+        where ID = #{id}
+    </update>
+
+    <delete id="deleteHkAirlineById" parameterType="Long">
+        delete from hk_airline where ID = #{id}
+    </delete>
+
+    <delete id="deleteHkAirlineByIds" parameterType="String">
+        delete from hk_airline where ID in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    
+</mapper>

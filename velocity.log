@@ -1,0 +1,152 @@
+2020-05-25 10:38:35,528 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:38:35,530 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:38:35,532 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:38:35,541 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:38:35,542 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:38:35,543 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:38:35,550 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:38:35,552 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:38:35,552 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:39:11,731 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,735 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,749 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,753 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,757 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,762 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,765 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,766 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,775 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:11,776 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:39:11,776 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:39:52,700 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,703 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,705 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,708 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,712 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,719 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,720 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,721 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,729 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:39:52,730 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:39:52,730 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:40:19,734 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,736 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,737 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,738 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,740 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,746 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,748 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,749 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,755 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:19,756 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:40:19,756 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:40:32,164 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,165 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,166 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,167 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,169 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,173 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,174 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,174 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,181 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:32,181 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:40:32,182 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:40:43,896 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,897 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,898 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,899 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,900 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,902 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,903 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,903 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,908 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:40:43,908 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:40:43,908 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:41:26,682 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,715 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,716 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,717 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,717 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,719 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,720 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,720 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,726 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:41:26,727 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:41:26,727 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:42:01,305 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,306 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,306 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,307 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,308 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,310 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,311 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,311 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,316 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:01,316 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:42:01,316 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:42:05,775 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,776 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,777 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,781 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,782 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,786 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,788 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,788 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,793 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:05,796 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:42:05,796 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:42:34,810 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,814 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,815 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,816 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,817 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,820 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,821 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,822 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,828 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:42:34,829 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:42:34,829 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:43:29,895 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,897 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,897 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,898 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,900 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,902 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,903 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,903 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,908 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:43:29,908 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:43:29,909 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:53:28,197 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,200 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,201 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,203 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,205 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,209 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,210 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,212 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,219 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:53:28,219 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:53:28,219 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:54:08,459 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,461 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,464 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,466 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,468 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,471 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,472 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,473 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,477 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:08,478 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:54:08,478 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.
+2020-05-25 10:54:59,561 - ResourceManager : found vm/java/domain.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,564 - ResourceManager : found vm/java/mapper.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,566 - ResourceManager : found vm/java/service.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,569 - ResourceManager : found vm/java/serviceImpl.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,571 - ResourceManager : found vm/java/controller.java.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,575 - ResourceManager : found vm/xml/mapper.xml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,578 - ResourceManager : found vm/sql/sql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,580 - ResourceManager : found vm/js/api.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,585 - ResourceManager : found vm/vue/index.vue.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-25 10:54:59,586 - Null reference [template 'vm/vue/index.vue.vm', line 414, column 12] : $confirm cannot be resolved.
+2020-05-25 10:54:59,586 - Null reference [template 'vm/vue/index.vue.vm', line 428, column 12] : $confirm cannot be resolved.

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.system.mapper.HkWeatherMapper">
+    
+    <resultMap type="HkWeather" id="HkWeatherResult">
+        <result property="id"    column="id"    />
+        <result property="weather"    column="weather"    />
+        <result property="cityid"    column="cityid"    />
+        <result property="date"    column="date"    />
+        <result property="location" column="location"/>
+        <result property="cityName" column="cityName"/>
+    </resultMap>
+
+    <sql id="selectHkWeatherVo">
+        select w.id, w.weather, w.cityid, w.date , ct.location as location , ct.name as cityName
+        from hk_weather as w
+            left join hk_city as ct on ct.id =  w.cityid
+    </sql>
+
+    <select id="selectHkWeatherList" parameterType="HkWeather" resultMap="HkWeatherResult">
+        <include refid="selectHkWeatherVo"/>
+        <where>  
+            <if test="weather != null  and weather != ''"> and weather = #{weather}</if>
+            <if test="cityid != null "> and cityid = #{cityid}</if>
+            <if test="date != null "> and TO_DAYS(date) = TO_DAYS(#{date})</if>
+        </where>
+    </select>
+    
+    <select id="selectHkWeatherById" parameterType="Long" resultMap="HkWeatherResult">
+        <include refid="selectHkWeatherVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertHkWeather" parameterType="HkWeather" useGeneratedKeys="true" keyProperty="id">
+        insert into hk_weather
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="weather != null  and weather != ''">weather,</if>
+            <if test="cityid != null ">cityid,</if>
+            <if test="date != null ">date,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="weather != null  and weather != ''">#{weather},</if>
+            <if test="cityid != null ">#{cityid},</if>
+            <if test="date != null ">#{date},</if>
+         </trim>
+    </insert>
+
+    <update id="updateHkWeather" parameterType="HkWeather">
+        update hk_weather
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="weather != null  and weather != ''">weather = #{weather},</if>
+            <if test="cityid != null ">cityid = #{cityid},</if>
+            <if test="date != null ">date = #{date},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteHkWeatherById" parameterType="Long">
+        delete from hk_weather where id = #{id}
+    </delete>
+
+    <delete id="deleteHkWeatherByIds" parameterType="String">
+        delete from hk_weather where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    
+</mapper>
