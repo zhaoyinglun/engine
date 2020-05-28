@@ -33,7 +33,7 @@ import java.util.List;
 public class HKDashboardBaseController extends BaseController {
 
     @Autowired
-    private IHkOptionService optionService;
+    private IHkOptionService optionService
 
     @ApiOperation(value = "获取系统默认位置/缩放级别", response = DashboardBaseLocation.class)
     @GetMapping("/location")
